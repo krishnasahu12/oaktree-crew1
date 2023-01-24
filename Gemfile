@@ -9,9 +9,16 @@ gem 'rails', '~> 6.1.7'
 # gem 'sqlite3', '~> 1.4'
 gem 'pg'
 gem 'devise'
+gem "cancancan"
+gem "rolify"
+gem 'jquery-rails'
+gem 'rails3-jquery-autocomplete'
+gem 'jquery-validation-rails'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
-# Use SCSS for stylesheets
+# Use SCSS for stylesheetsgem 'jquery-rails'
+gem 'rails3-jquery-autocomplete'
+gem 'jquery-validation-rails'
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
