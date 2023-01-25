@@ -9,8 +9,11 @@ gem 'rails', '~> 6.1.7'
 # gem 'sqlite3', '~> 1.4'
 gem 'pg'
 gem 'devise'
-gem "cancancan"
 gem "rolify"
+gem "cancancan"
+gem 'friendly_id', '~> 5.4.0'
+gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
+gem 'social-share-button'
 gem 'jquery-rails'
 gem 'rails3-jquery-autocomplete'
 gem 'jquery-validation-rails'
