@@ -1,10 +1,14 @@
 class CandidatesController < ApplicationController
   load_and_authorize_resource :candidate, class: Candidate, except: [:show, :edit, :destroy, :update]
 
-    def index
+  def index
+    if params[:query].present?
+      @candidates = Candidate.global_search(params[:query])
+    else
       @candidates = Candidate.all
-      # authorize! :index, @candidates
     end
+    # authorize! :index, @candidates
+  end
     
     def show
       @candidate = Candidate.friendly.find(params[:id])

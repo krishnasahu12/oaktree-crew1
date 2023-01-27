@@ -1,8 +1,10 @@
 class Candidate < ApplicationRecord
+    include PgSearch::Model
+    pg_search_scope :global_search, against: [:first_name, :last_name], using: { tsearch: { prefix: true } }
     extend FriendlyId
     friendly_id :first_name, use: :slugged
-    # has_one_attached :image
-    # mount_uploader :file, FileUploader
+    has_one_attached :image
+    mount_uploader :file, FileUploader
     GENDER_LIST = ["Male", "Female", "Other"]
     MARITAL_LIST = ["Married", "Unmarried"]
     NATIONALITY_LIST = ["United Kingdom", "Austria", "Bahrain", "Canada", "Denmark", "Germany"]
